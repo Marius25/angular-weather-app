@@ -1,0 +1,56 @@
+<div>
+    <form>
+        <div>
+            <input type="text" ng-model="city" placeholder=" Įveskite miestą pvz: Vilnius  " />
+        </div>
+        <div>
+            <button ng-click="searchPresentWeatherByCity(city)">
+                <i class="fa fa-cloud-download fa-3x" aria-hidden="true"></i>
+            </button>
+        </div>
+    </form>
+</div>
+<div class="row" ng-switch="weatherData.cod">
+    <div ng-switch-when="200">
+        <div class="present-weather">
+            <h3 class="city-name">{{city}} <img ng-src="http://openweathermap.org/img/w/{{weatherData.weather.0.icon}}.png" /></h3>
+            <div id="list">
+                <div id="item">
+                    <span class="main-temp">{{weatherData.main.temp  | number:1}}</span><span class="celsius-sign">&#8451</span>
+                </div>
+                <div id="item">
+                    <span class="description" id="item"> {{weatherData.weather.0.main}} </span>
+                </div>
+                <div id="item">
+                    <span class="record-date" id="item">Data:<br />{{weatherDate | date:'dd.MM.yyyy HH:mm'}} </span>
+                </div>
+            </div>
+            <div id="list">
+                <div id="item">
+                    <p>
+                        Min:
+                        <br> <span class="max-min-temp">{{weatherData.main.temp_min | number:1}}</span><span class="celsius-sign">&#8451</span>
+                    </p>
+                </div>
+                <div id="item">
+                    <p>
+                        Max:
+                        <br><span class="max-min-temp">{{weatherData.main.temp_max | number:1}}</span><span class="celsius-sign"> &#8451</span>
+                    </p>
+                </div>
+                <div id="item">
+                    <p class="humidity">Drėgmė:
+                        <br> {{weatherData.main.humidity}} % </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="404">
+        <div>
+            <div data-alert class="alert-box">
+                Error: {{city}} not found
+                <a href="#">&times;</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,122 @@
+/*--MAIN CSS--*/
+
+body,
+a,
+ul {
+    background: url('../img/bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #fff;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    width: 100%;
+}
+
+.header h1 {
+    padding-top: 50px;
+    font-size: 2em;
+    color: #fff;
+    margin: 0;
+}
+
+#menu {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#menu-item {
+    margin: 20px;
+    display: inline-block;
+}
+
+a {
+    border: 3px solid #fff;
+    padding: 10px 15px;
+}
+
+#menu-item a:hover {
+    color: #d3d3d3;
+    border: 3px solid #d3d3d3;
+}
+
+
+/*--DIRECTIVES CSS--*/
+
+input {
+    width: 300px;
+    border: 3px solid #fff;
+}
+
+.city-name {
+    text-transform: capitalize;
+    font-family: 'Roboto', sans;
+    font-size: 2em;
+    color: #fff;
+}
+
+button {
+    color: #CCAC00;
+    margin: 20px;
+    width: 100px;
+    background-color: #fff;
+    border: 3px solid #CCAC00;
+}
+
+button:hover {
+    color: #d3d3d3;
+    border: 3px solid #d3d3d3;
+}
+
+#list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+#item {
+    margin: 10px;
+    color: #fff;
+}
+
+.row {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.main-temp {
+    font-size: 2.5em;
+}
+
+.max-min-temp {
+    font-size: 1.5em;
+}
+
+.max-min-temp.max {
+    color: red;
+}
+
+.max-min-temp.min {
+    color: blue;
+}
+
+.celsius-sign {
+    vertical-align: top;
+}
+
+.record-date,
+.few-forecast .humidity {
+    font-size: 1em;
+}
+
+.description {
+    font-size: 1em;
+}
